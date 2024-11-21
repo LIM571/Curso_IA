@@ -40,8 +40,7 @@ O **Curso de Inteligência Artificial: Fundamentos, Aplicações e Criatividade*
 Este curso será totalmente online, utilizando recursos como:
 - **Vídeos explicativos** 📹.
 - **Textos interativos** 📝.
-- **Quizzes** para avaliar o aprendizado ⚡.
-- **Fóruns de discussão** para interação 💬.
+- **Atividades** para avaliar o aprendizado ⚡.
 
 Os alunos terão acesso a materiais diversificados e poderão realizar autoavaliações ao longo do curso.
 
@@ -75,7 +74,7 @@ Este curso é destinado a:
 
 - **Carlos Henrique da Rosa Pereira** - Aluno.
 - **Gabriel de Lima Dutra** - Aluno.
-- **Ting** - Aluno.
+- **Ting Wei Chang** - Aluno.
 
 A equipe também será composta por até **quatro alunos** de cursos técnicos ou de graduação que auxiliarão no desenvolvimento do conteúdo.
 
@@ -95,14 +94,6 @@ A equipe também será composta por até **quatro alunos** de cursos técnicos o
 
 ---
 
-## Avaliação e Certificação 🏅
-
-- Os alunos serão avaliados através de **quizzes** ao final de cada módulo.
-- Será solicitado um **projeto final** demonstrando a aplicação dos conhecimentos adquiridos.
-- **Certificados** serão emitidos para aqueles que completarem o curso com sucesso.
-
----
-
 ## Conclusão 🎉
 
 Este curso oferece uma abordagem completa e prática de Inteligência Artificial, integrando seus conceitos fundamentais com aplicações criativas. Ele proporciona uma experiência educacional única, atendendo às necessidades do público-alvo e preparando os alunos para o futuro da tecnologia!
@@ -119,4 +110,4 @@ Você pode acessar todos os materiais do curso através do seguinte link:
 **Gravataí, 2024**  
 **Carlos Henrique da Rosa Pereira**  
 **Gabriel de Lima Dutra**  
-**Ting**
+**Ting Wei Ting**
