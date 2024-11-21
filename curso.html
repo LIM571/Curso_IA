@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Curso de IA - Conteúdo</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-900 text-gray-200">
+  <!-- Navbar -->
+  <nav class="bg-gray-800 shadow-md">
+    <div class="container mx-auto px-4 py-4 flex justify-between items-center">
+      <a href="index.html" class="text-xl font-bold hover:text-blue-400 transition">Curso de IA</a>
+      <ul class="flex space-x-6">
+        <li><a href="index.html" class="hover:text-blue-400 transition">Home</a></li>
+        <li><a href="curso.html" class="hover:text-blue-400 transition">Curso</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- Layout Principal -->
+  <div class="flex h-screen">
+    <!-- Barra Lateral -->
+    <aside class="bg-gray-800 w-64 p-6">
+      <h2 class="text-lg font-bold mb-4">Módulos</h2>
+      <ul class="space-y-4">
+        <li><a href="#" onclick="carregarModulo(1)" class="hover:text-blue-400 transition">Módulo 1: Introdução a Inteligência Artificial</a></li>
+        <li><a href="#" onclick="carregarModulo(2)" class="hover:text-blue-400 transition">Módulo 2: Aumento da produtividade com o Uso de IA</a></li>
+        <li><a href="#" onclick="carregarModulo(3)" class="hover:text-blue-400 transition">Módulo 3: Aplicação de IA no ensino</a></li>
+      </ul>
+    </aside>
+
+    <!-- Conteúdo Principal -->
+    <main class="flex-1 p-6">
+      <h1 id="tituloModulo" class="text-2xl font-bold mb-4">Selecione um módulo para começar</h1>
+      <div id="conteudoModulo" class="space-y-4 bg-gray-800 p-6 rounded-lg shadow-md">
+        <p>Escolha um módulo na barra lateral para visualizar o conteúdo.</p>
+      </div>
+    </main>
+  </div>
+
+  <script>
+    // Conteúdo dos módulos
+    const conteudo = {
+      1: `
+        <h2 class="text-xl font-semibold">Módulo 1: Fundamentos</h2>
+        <p>Este módulo introduz os principais conceitos da Inteligência Artificial.</p>
+        <ul class="space-y-4">
+          <li>
+            <h3 class="text-lg font-semibold">Aula 1: Introdução</h3>
+            <video controls class="mt-2 w-full">
+              <source src="src/M1.1.mov" type="video/mp4">
+              Seu navegador não suporta vídeos.
+            </video>
+          </li>
+          <li>
+            <h3 class="text-lg font-semibold">Aula 2: Conceito de IA</h3>
+            <video controls class="mt-2 w-full">
+              <source src="src/M1.2.mov" type="video/mp4">
+              Seu navegador não suporta vídeos.
+            </video>
+          </li>
+          <li>
+            <h3 class="text-lg font-semibold">Aula 3: História da IA</h3>
+            <video controls class="mt-2 w-full">
+              <source src="src/M1.3.mov" type="video/mp4">
+              Seu navegador não suporta vídeos.
+            </video>
+          </li>
+          <li>
+            <h3 class="text-lg font-semibold">Aula 4: Fundamentos de IA</h3>
+            <video controls class="mt-2 w-full">
+              <source src="src/M1.4.mov" type="video/mp4">
+              Seu navegador não suporta vídeos.
+            </video>
+          </li>
+          <li>
+            <h3 class="text-lg font-semibold">Aula 5: Como as Máquinas Aprendem</h3>
+            <video controls class="mt-2 w-full">
+              <source src="src/M1.5.mov" type="video/mp4">
+              Seu navegador não suporta vídeos.
+            </video>
+          </li>
+          <li>
+            <h3 class="text-lg font-semibold">Aula 6: Tipos de IA</h3>
+            <video controls class="mt-2 w-full">
+              <source src="src/M1.6.mov" type="video/mp4">
+              Seu navegador não suporta vídeos.
+            </video>
+          </li>
+          <li>
+            <h3 class="text-lg font-semibold">Aula 7: Tecnologia de IA e Suas Aplicações</h3>
+            <video controls class="mt-2 w-full">
+              <source src="src/M1.7.mov" type="video/mp4">
+              Seu navegador não suporta vídeos.
+            </video>
+          </li>
+          <li>
+            <h3 class="text-lg font-semibold">Aula 8: Desafios Éticos da IA</h3>
+            <video controls class="mt-2 w-full">
+              <source src="src/M1.8.mov" type="video/mp4">
+              Seu navegador não suporta vídeos.
+            </video>
+          </li>
+          <li>
+            <h3 class="text-lg font-semibold">Aula 9: Tendências Futuras</h3>
+            <video controls class="mt-2 w-full">
+              <source src="src/M1.9.mov" type="video/mp4">
+              Seu navegador não suporta vídeos.
+            </video>
+          </li>
+        </ul>
+        <a href="src/Modulo1.pdf" download class="block mt-6 text-center bg-blue-500 text-white py-2 px-4 rounded-lg hover:bg-blue-600 transition">
+          Baixar Slides do Módulo 1
+        </a>
+      `,
+      2: `
+        
+        <h2 class="text-xl font-semibold">Módulo 2: Aplicações</h2>
+        <p>Este módulo explora as aplicações práticas da IA em diversos setores.</p>
+        <ul class="space-y-4">
+          <li>
+            <h3 class="text-lg font-semibold">Aula 1: Introdução</h3>
+            <video controls class="mt-2 w-full">
+              <source src="src/M2.1.mp4" type="video/mp4">
+              Seu navegador não suporta vídeos.
+            </video>
+          </li>
+          <li>
+            <h3 class="text-lg font-semibold">Aula 2: Ferramentas de IA para aumentar a produtividade</h3>
+            <p>
+              Saiba mais sobre ferramentas de IA úteis em <a href="https://zapier.com/" target="_blank" class="text-blue-400 hover:underline">Zapier</a>.
+            </p>
+            <video controls class="mt-2 w-full">
+              <source src="src/M2.2.mp4" type="video/mp4">
+              Seu navegador não suporta vídeos.
+            </video>
+          </li>
+          <li>
+            <h3 class="text-lg font-semibold">Aula 3: Análise de dados com IA</h3>
+            <p>
+              Explore as ferramentas disponíveis no site da Microsoft:
+              <a href="https://www.microsoft.com/pt-br/download/details.aspx?id=58494" target="_blank" class="text-blue-400 hover:underline">Download de Ferramentas</a>.
+            </p>
+            <a href="src/DadosTreino.xlsx" download class="text-blue-400 hover:underline">Baixe um exemplo de planilha Excel</a>
+            <video controls class="mt-2 w-full">
+              <source src="src/M2.3.mp4" type="video/mp4">
+              Seu navegador não suporta vídeos.
+            </video>
+          </li>
+          <li>
+            <h3 class="text-lg font-semibold">Aula 4: Integração da IA em processos empresariais</h3>
+            <video controls class="mt-2 w-full">
+              <source src="src/M2.4.mp4" type="video/mp4">
+              Seu navegador não suporta vídeos.
+            </video>
+          </li>
+        </ul>
+        <a href="src/Modulo2.pdf" download class="block mt-6 text-center bg-blue-500 text-white py-2 px-4 rounded-lg hover:bg-blue-600 transition">
+          Baixar Slides do Módulo 2
+        </a>
+      `,
+      
+      3: `
+      <h2 class="text-xl font-semibold">Módulo 3: Aplicação de IA no ensino</h2>
+        <p>Este módulo explorará se a Inteligência Artificial pode ser considerada uma ferramenta eficaz para fins educacionais, analisando seus benefícios, desafios e impactos no processo de ensino-aprendizagem.</p>
+        <video controls class="mt-4 w-full">
+          <source src="src/M3.1.mp4" type="video/mp4">
+          Seu navegador não suporta vídeos.
+        </video>
+        <h2 class="text-xl font-semibold">Módulo 3: Texto sobre IA nas escolas</h2>
+
+        <a href="https://br.biopassid.com/post/artificial-intelligence-in-schools" target="_blank" class="text-blue-400 hover:underline">Inteligência Artificial nas Escolas: vantagens para a Gestão Educacional:
+</a>
+        <h2 class="text-xl font-semibold">Módulo 3: Personalização de ensino com IA</h2>
+        <p>Este módulo veremos formas de utilizar a IA dentro e fora de sala de aula.</p>
+        
+
+        <video controls class="mt-4 w-full">
+          <source src="src/M3.2.mp4" type="video/mp4">
+          Seu navegador não suporta vídeos.
+        </video>
+        <h2 class="text-xl font-semibold">Módulo 3: A IA vai prejudicar as escolas ?</h2>
+        <a href="https://noticias.portaldaindustria.com.br/noticias/geracao-sesi-senai/a-inteligencia-artificial-vai-prejudicar-a-educacao-descubra-pontos-positivos-e-negativos/ " target="_blank" class="text-blue-400 hover:underline">A Inteligência Artificial vai prejudicar a Educação? Descubra pontos positivos e negativos
+</a>
+
+        <h2 class="text-xl font-semibold">Módulo 3: Proposta do Desafio</h2>
+        <p>Este módulo sera apresentando o desafio do curso.</p>
+        <video controls class="mt-4 w-full">
+          <source src="src/M3.3.mp4" type="video/mp4">
+          Seu navegador não suporta vídeos.
+        </video>
+        <a href="src/Modulo3.pdf" download class="block mt-6 text-center bg-blue-500 text-white py-2 px-4 rounded-lg hover:bg-blue-600 transition">
+          Baixar Slides do Módulo 3
+        </a>
+        
+       `
+    };
+
+    // Função para carregar o conteúdo do módulo
+    function carregarModulo(modulo) {
+      document.getElementById('tituloModulo').innerText = `Módulo ${modulo}`;
+      document.getElementById('conteudoModulo').innerHTML = conteudo[modulo];
+    }
+  </script>
+</body>
+</html>
