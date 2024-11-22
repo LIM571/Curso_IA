@@ -10,17 +10,38 @@
   <!-- Navbar -->
   <nav class="bg-gray-800 shadow-md">
     <div class="container mx-auto px-4 py-4 flex justify-between items-center">
-      <div class="flex items-center space-x-4">
-        <img src="src/Logo.png" alt="Logo AI Nexus" class="h-10">
-        <a href="index.html" class="text-xl font-bold hover:text-blue-400 transition">AI Nexus</a>
-      </div>
-      <ul class="flex space-x-6">
-        <li><a href="index.html" class="hover:text-blue-400 transition">Home</a></li>
-        <li><a href="curso.html" class="hover:text-blue-400 transition">Curso</a></li>
+      <!-- Logo -->
+      <a href="index.html" class="flex items-center space-x-2">
+        <img src="src/Logo.png" alt="Logo" class="h-8 w-8">
+        <span class="text-xl font-bold text-gray-200 hover:text-blue-400 transition transform hover:scale-105">Curso de IA</span>
+      </a>
+      <!-- Menu Toggle for Mobile -->
+      <button id="menuToggle" class="lg:hidden text-gray-200 focus:outline-none">
+        <svg class="w-6 h-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+        </svg>
+      </button>
+      <!-- Navigation Links for Desktop -->
+      <ul class="hidden lg:flex space-x-6">
+        <li>
+          <a href="index.html" class="text-gray-200 hover:text-blue-400 transition transform hover:scale-105">Home</a>
+        </li>
+        <li>
+          <a href="curso.html" class="text-gray-200 hover:text-blue-400 transition transform hover:scale-105">Curso</a>
+        </li>
       </ul>
     </div>
+    <!-- Mobile Navigation -->
+    <ul id="mobileMenu" class="hidden bg-gray-800 p-4 space-y-4">
+      <li>
+        <a href="index.html" class="block text-gray-200 hover:text-blue-400 transition">Home</a>
+      </li>
+      <li>
+        <a href="curso.html" class="block text-gray-200 hover:text-blue-400 transition">Curso</a>
+      </li>
+    </ul>
   </nav>
-  
+
   <!-- Main Section -->
   <main class="container mx-auto px-4 py-12">
     <div class="bg-gray-800 p-8 rounded-lg shadow-md mb-8">
@@ -71,5 +92,12 @@
       </div>
     </div>
   </main>
+
+  <script>
+    document.getElementById('menuToggle').addEventListener('click', () => {
+      const mobileMenu = document.getElementById('mobileMenu');
+      mobileMenu.classList.toggle('hidden');
+    });
+  </script>
 </body>
 </html>

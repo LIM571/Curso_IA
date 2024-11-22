@@ -10,18 +10,33 @@
   <!-- Navbar -->
   <nav class="bg-gray-800 shadow-md">
     <div class="container mx-auto px-4 py-4 flex justify-between items-center">
-      <a href="index.html" class="text-xl font-bold hover:text-blue-400 transition">Curso de IA</a>
-      <ul class="flex space-x-6">
-        <li><a href="index.html" class="hover:text-blue-400 transition">Home</a></li>
-        <li><a href="curso.html" class="hover:text-blue-400 transition">Curso</a></li>
+      <!-- Logo -->
+      <a href="index.html" class="flex items-center space-x-2">
+        <img src="src/Logo.png" alt="Logo" class="h-8 w-8">
+        <span class="text-xl font-bold text-gray-200 hover:text-blue-400 transition transform hover:scale-105">Curso de IA</span>
+      </a>
+      <!-- Menu Toggle for Mobile -->
+      <button id="menuToggle" class="lg:hidden text-gray-200 focus:outline-none">
+        <svg class="w-6 h-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+        </svg>
+      </button>
+      <!-- Navigation Links -->
+      <ul class="hidden lg:flex space-x-6">
+        <li>
+          <a href="index.html" class="text-gray-200 hover:text-blue-400 transition transform hover:scale-105">Home</a>
+        </li>
+        <li>
+          <a href="curso.html" class="text-gray-200 hover:text-blue-400 transition transform hover:scale-105">Curso</a>
+        </li>
       </ul>
     </div>
   </nav>
+  
 
-  <!-- Layout Principal -->
   <div class="flex h-screen">
     <!-- Barra Lateral -->
-    <aside class="bg-gray-800 w-64 p-6">
+    <aside id="sidebar" class="bg-gray-800 w-64 p-6 lg:block hidden">
       <h2 class="text-lg font-bold mb-4">Módulos</h2>
       <ul class="space-y-4">
         <li><a href="#" onclick="carregarModulo(1)" class="hover:text-blue-400 transition">Módulo 1: Introdução a Inteligência Artificial</a></li>
@@ -40,10 +55,24 @@
   </div>
 
   <script>
+    // Alternar visibilidade do menu lateral em telas pequenas
+    const menuToggle = document.getElementById("menuToggle");
+    const sidebar = document.getElementById("sidebar");
+
+    menuToggle.addEventListener("click", () => {
+      sidebar.classList.toggle("hidden");
+
+      
+    });
+
+    document.getElementById('menuToggle').addEventListener('click', () => {
+  const mobileMenu = document.getElementById('mobileMenu');
+  mobileMenu.classList.toggle('hidden'); })
+
     // Conteúdo dos módulos
     const conteudo = {
       1: `
-        <h2 class="text-xl font-semibold">Módulo 1: Fundamentos</h2>
+           <h2 class="text-xl font-semibold">Módulo 1: Fundamentos</h2>
         <p>Este módulo introduz os principais conceitos da Inteligência Artificial.</p>
         <ul class="space-y-4">
           <li>
@@ -160,9 +189,8 @@
           Baixar Slides do Módulo 2
         </a>
       `,
-      
       3: `
-      <h2 class="text-xl font-semibold">Módulo 3: Aplicação de IA no ensino</h2>
+        <h2 class="text-xl font-semibold">Módulo 3: Aplicação de IA no ensino</h2>
         <p>Este módulo explorará se a Inteligência Artificial pode ser considerada uma ferramenta eficaz para fins educacionais, analisando seus benefícios, desafios e impactos no processo de ensino-aprendizagem.</p>
         <video controls class="mt-4 w-full">
           <source src="src/M3.1.mp4" type="video/mp4">
@@ -193,8 +221,7 @@
         <a href="src/Modulo3.pdf" download class="block mt-6 text-center bg-blue-500 text-white py-2 px-4 rounded-lg hover:bg-blue-600 transition">
           Baixar Slides do Módulo 3
         </a>
-        
-       `
+      `
     };
 
     // Função para carregar o conteúdo do módulo
