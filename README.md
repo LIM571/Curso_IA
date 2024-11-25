@@ -83,7 +83,7 @@ A equipe também será composta por até **quatro alunos** de cursos técnicos o
 ## Recursos Necessários 🔧
 
 - **Computador ou dispositivo** com acesso à internet 🌐.
-- Acesso à plataforma de e-learning: [Acessar Plataforma](https://lim571.github.io/Curso_IA/).
+- Acesso à plataforma de e-learning: [Acessar Plataforma](https://lim571.github.io/Plataforma-IA/curso.html).
 
 ---
 
